@@ -99,8 +99,34 @@ article h1 {
   color: var(--color-1);
 }
 
-#big-list li {
+.big-list li {
   margin-bottom: 3em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 4em 0;
+  background-color: var(--color-2);
+  color: var(--color-1);
+}
+
+footer #team-info {
+  width: 75%;
+}
+
+footer #team-info h1 {
+  margin: 0;
+}
+
+footer #team-info span {
+  font-style: italic;
+}
+
+footer #team-info a {
+  color: #6B0FD7;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 1250px) {
