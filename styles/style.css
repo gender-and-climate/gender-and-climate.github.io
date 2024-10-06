@@ -139,6 +139,10 @@ a {
   font-weight: bold;
 }
 
+img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 1250px) {
   main {
     padding: 10em;
