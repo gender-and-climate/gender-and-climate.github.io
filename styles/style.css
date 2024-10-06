@@ -1,0 +1,149 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #6B0FD7;
+  --color-2: #D8E203;
+  --color-3: #f3f4ec;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+button {
+  user-select: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1.5em 3em;
+  background-color: var(--color-2);
+  color: var(--color-1);
+  border-bottom: 3px solid var(--color-2);
+}
+
+nav span {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 10em;
+  background-color: var(--color-1);
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  margin: 0;
+}
+
+main #text-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+main #heading-part h1 {
+  color: var(--color-2);
+  font-size: 3.5em;
+}
+
+main #description-part p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2em;
+}
+
+main #learn-more-button {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 2em;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+article {
+  margin: 0 auto 2em auto;
+  padding: 4em 2em 0 2em;
+  max-width: 600px;
+}
+
+article h1 {
+  font-size: 2.2em;
+}
+
+.ref-link {
+  color: var(--color-1);
+}
+
+#big-list li {
+  margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 1250px) {
+  main {
+    padding: 10em;
+  }
+
+  main #text-part {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    padding: 1em 2em;
+  }
+  
+  nav span {
+    font-size: 1em;
+  }
+
+  main {
+    padding: 5em 2em;
+    min-height: 70vh;
+  }
+  
+  main #text-part {
+    flex-direction: column;
+  }
+
+  main #heading-part h1 {
+    font-size: 2em;
+  }
+
+  main #description-part p {
+    font-size: 1em;
+  }
+
+  main #description-part button {
+    width: 100%;
+  }
+
+  main #learn-more-button {
+    font-size: 1em;
+  }
+}
