@@ -7,13 +7,12 @@
 :root {
   --color-1: #6b0fd7;
   --color-2: #d8e203;
-  --color-3: #f3f4ec;
 }
 
 html,
 body {
-  margin: 0;
   min-height: 100vh;
+  margin: 0;
 }
 
 body {
@@ -34,9 +33,9 @@ nav {
   z-index: 1;
   width: 100%;
   padding: 1.5em 3em;
+  border-bottom: 3px solid var(--color-2);
   background-color: var(--color-2);
   color: var(--color-1);
-  border-bottom: 3px solid var(--color-2);
 }
 
 nav span {
@@ -119,15 +118,18 @@ footer {
   color: var(--color-1);
 }
 
-footer #team-info {
+footer #footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 75%;
 }
 
-footer #team-info h1 {
+footer #footer-content h1 {
   margin: 0;
 }
 
-footer #team-info span {
+footer #footer-content span {
   font-style: italic;
 }
 
@@ -152,13 +154,13 @@ a {
     padding: 1em 2em;
   }
 
-  nav span {
+  nav span, main #description-part p, main #learn-more-button {
     font-size: 1em;
   }
 
   main {
-    padding: 5em 2em;
     min-height: 70vh;
+    padding: 5em 2em;
   }
 
   main #text-part {
@@ -169,15 +171,7 @@ a {
     font-size: 2em;
   }
 
-  main #description-part p {
-    font-size: 1em;
-  }
-
   main #description-part button {
     width: 100%;
-  }
-
-  main #learn-more-button {
-    font-size: 1em;
   }
 }
