@@ -1,21 +1,24 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
 :root {
-  --color-1: #6B0FD7;
-  --color-2: #D8E203;
+  --color-1: #6b0fd7;
+  --color-2: #d8e203;
   --color-3: #f3f4ec;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100vh;
 }
 
 body {
   background-color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
 
@@ -52,7 +55,12 @@ main {
   background-color: var(--color-1);
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
   margin: 0;
 }
 
@@ -124,7 +132,7 @@ footer #team-info span {
 }
 
 a {
-  color: #6B0FD7;
+  color: #6b0fd7;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -143,7 +151,7 @@ a {
   nav {
     padding: 1em 2em;
   }
-  
+
   nav span {
     font-size: 1em;
   }
@@ -152,7 +160,7 @@ a {
     padding: 5em 2em;
     min-height: 70vh;
   }
-  
+
   main #text-part {
     flex-direction: column;
   }
