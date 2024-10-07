@@ -9,6 +9,11 @@
   --color-2: #d8e203;
 }
 
+::selection {
+  background-color: #d8e203;
+  color: #6b0fd7;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -40,6 +45,9 @@ nav {
   background-color: var(--color-2);
   color: var(--color-1);
   user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
   -webkit-user-drag: none;
 }
 
