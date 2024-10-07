@@ -39,6 +39,8 @@ nav {
   border-bottom: 3px solid var(--color-2);
   background-color: var(--color-2);
   color: var(--color-1);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 nav span {
