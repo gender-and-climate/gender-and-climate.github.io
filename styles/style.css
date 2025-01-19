@@ -144,6 +144,8 @@ article .article-text h1 {
 
 #reference-list li {
   overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .big-list li {
