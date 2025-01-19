@@ -114,9 +114,9 @@ article .article-text h1 {
 #main h1,
 #footer h1 {
   margin: 0;
+  margin-bottom: 1em;
   color: var(--color-2);
   font-size: 3em;
-  margin-bottom: 1em;
 }
 
 #main p,
