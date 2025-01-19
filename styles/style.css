@@ -7,6 +7,9 @@
 :root {
   --color-1: #6b0fd7;
   --color-2: #d8e203;
+  --color-3: #583481;
+  --color-4: #575631;
+  --color-5: #ebedf8;
 }
 
 ::selection {
@@ -32,184 +35,156 @@ button {
   cursor: pointer;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.arrow {
   position: absolute;
-  top: 0;
-  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  background-color: transparent;
+  border: none;
+}
+
+#left-arrow {
+  left: 100px;
+}
+
+#right-arrow {
+  right: 100px;
+}
+
+.arrow svg {
   width: 100%;
-  padding: 0.5em 3em;
-  border-bottom: 3px solid var(--color-2);
-  background-color: var(--color-2);
-  color: var(--color-1);
-  user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
+  height: 100%;
 }
 
-nav span {
-  font-size: 1.25em;
-  font-weight: 700;
+.arrow svg path {
+  transition: stroke 0.2s;
 }
 
-nav img {
-  width: 64px;
+.arrow.white svg path {
+  stroke: rgba(255, 255, 255, 0.5);
 }
 
-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 10em;
-  background-color: var(--color-1);
+.arrow.white:hover svg path {
+  stroke: #fff;
 }
 
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-  margin: 0;
+.arrow.black svg path {
+  stroke: rgba(0, 0, 0, 0.5);
 }
 
-main #text-part {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3em;
-}
-
-main #heading-part h1 {
-  color: var(--color-2);
-  font-size: 3.5em;
-}
-
-main #description-part p {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 2em;
-}
-
-main #learn-more-button {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  padding: 0.5em 2em;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.2em;
-  font-weight: 700;
-  cursor: pointer;
+.arrow.black:hover svg path {
+  stroke: #000;
 }
 
 article {
-  margin: 0 auto 2em auto;
-  padding: 4em 2em 0 2em;
-  max-width: 600px;
+  display: none;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 4em 0;
+  background-color: var(--color-5);
 }
 
-article h1 {
+article .article-text {
+  max-width: 800px;
+  padding: 4em 0;
+  font-size: 1.3em;
+}
+
+article .article-text h1 {
+  margin-top: 0;
   font-size: 2.2em;
+}
+
+#main,
+#footer {
+  align-items: center;
+  background-color: var(--color-1);
+}
+
+#main .text,
+#footer .text {
+  max-width: 800px;
+  padding: 4em;
+  border: 10px solid var(--color-2);
+  border-radius: 30px;
+}
+
+#main h1,
+#footer h1 {
+  margin: 0;
+  color: var(--color-2);
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+#main p,
+#footer p {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.background-color-1 {
+  background-color: var(--color-3);
+  color: #fff;
+}
+
+.background-color-2 {
+  background-color: var(--color-4);
+  color: #fff;
+}
+
+.background-color-1 a,
+.background-color-2 a,
+#main a,
+#footer a {
+  color: var(--color-2);
 }
 
 #reference-list li {
   overflow-wrap: break-word;
 }
 
-.ref-link {
-  color: var(--color-1);
-}
-
 .big-list li {
   margin-bottom: 3em;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  padding: 4em 2em;
-  background-color: var(--color-2);
-  color: var(--color-1);
-}
-
-footer #footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 75%;
-}
-
-footer #footer-content h1 {
-  margin: 0;
-}
-
-footer #footer-content span {
-  font-style: italic;
+li:target {
+  background-color: rgba(216, 226, 3, 0.5);
 }
 
 a {
-  color: #6b0fd7;
+  color: var(--color-1);
   text-decoration: underline;
   font-weight: bold;
 }
 
 img {
   width: 100%;
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 1250px) {
-  main {
-    padding: 10em;
+  article {
+    display: flex;
+    padding: 2.5em;
   }
 
-  main #text-part {
-    flex-wrap: wrap;
-  }
-
-  footer #footer-content {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-
-  footer #footer-content h1 {
-    text-align: center;
+  #left-arrow,
+  #right-arrow {
+    display: none;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  nav {
-    padding: 0.75em 2em;
+  body {
+    font-size: 14px;
   }
 
-  nav span, main #description-part p, main #learn-more-button {
-    font-size: 1em;
-  }
-
-  nav img {
-    width: 32px;
-  }
-
-  main {
-    min-height: 70vh;
-    padding: 5em 2em;
-  }
-
-  main #text-part {
-    flex-direction: column;
-  }
-
-  main #heading-part h1 {
-    font-size: 2em;
-  }
-
-  main #description-part button {
-    width: 100%;
+  #main .text,
+  #footer .text {
+    padding: 2em 0;
+    border: none;
   }
 }
